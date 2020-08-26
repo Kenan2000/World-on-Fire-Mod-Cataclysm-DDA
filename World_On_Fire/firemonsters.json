@@ -1,5 +1,5 @@
 [
- {
+  {
     "id": "mon_ant_fire",
     "type": "MONSTER",
     "name": "giant fire ant",
@@ -9,7 +9,7 @@
     "species": [ "INSECT" ],
     "diff": 2,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 60,
     "speed": 100,
     "material": [ "iflesh" ],
@@ -27,34 +27,34 @@
     "vision_day": 5,
     "vision_night": 5,
     "upgrades": { "age_grow": 14, "into": "mon_ant_fire_soldier" },
-    "special_attacks": [ [ "EAT_FOOD", 30 ],
-{
+    "special_attacks": [
+      [ "EAT_FOOD", 30 ],
+      {
         "type": "melee",
         "cooldown": 25,
         "move_cost": 150,
         "melee_type": "firesting",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
         "ranges": [ [ 1, 1, "DEFAULT" ] ],
         "description": "Fire Ant bites, then attempts to sting!"
       },
-{
+      {
         "type": "gun",
         "cooldown": 25,
         "move_cost": 150,
         "gun_type": "napalm_spit",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Fire ant manibles click with a spark, launching firey spit!"
       }
- ],
+    ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": [ "NORMAL" ],
     "harvest": "arachnid_fire",
@@ -69,7 +69,7 @@
     "bodytype": "insect",
     "species": [ "INSECT" ],
     "volume": "30000 ml",
-    "weight": 40750,
+    "weight": "40750 g",
     "hp": 20,
     "speed": 15,
     "material": [ "iflesh" ],
@@ -96,7 +96,7 @@
     "species": [ "INSECT" ],
     "diff": 2,
     "volume": "92500 ml",
-    "weight": 120000,
+    "weight": "120000 g",
     "hp": 110,
     "speed": 60,
     "material": [ "iflesh" ],
@@ -127,7 +127,7 @@
     "species": [ "INSECT" ],
     "diff": 2,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 100,
     "speed": 100,
     "material": [ "iflesh" ],
@@ -144,39 +144,39 @@
     "armor_cut": 14,
     "vision_day": 5,
     "vision_night": 5,
-    "special_attacks": [ {
+    "special_attacks": [
+      {
         "type": "melee",
         "cooldown": 25,
         "move_cost": 150,
         "melee_type": "firesting",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
         "ranges": [ [ 1, 1, "DEFAULT" ] ],
         "description": "Fire Ant bites, then attempts to sting!"
       },
-{
+      {
         "type": "gun",
         "cooldown": 25,
         "move_cost": 150,
         "gun_type": "napalm_gob",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Fire ant manibles click with a spark, launching a glob of firey spit!"
       }
-],
+    ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": [ "FIREBALL", "NORMAL" ],
     "harvest": "arachnid_fire",
     "flags": [ "FIREPROOF", "DRIPS_NAPALM", "CLIMBS", "HEARS", "VENOM", "ATTACKMON", "SEES", "SMELLS", "SWIMS" ]
   },
-{
+  {
     "id": "mon_zombie_firebag",
     "type": "MONSTER",
     "name": "ember bloated zombie",
@@ -186,7 +186,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 5,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 15,
     "speed": 80,
     "material": [ "flesh" ],
@@ -206,7 +206,7 @@
     "death_function": [ "FIREBALL" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "POISON", "NO_BREATHE", "REVIVES", "FILTHY", "FLAMMABLE" ]
   },
-{
+  {
     "id": "mon_zombie_firey",
     "type": "MONSTER",
     "name": "volatile zombie",
@@ -216,7 +216,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 5,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 65,
     "speed": 80,
     "material": [ "flesh" ],
@@ -231,20 +231,22 @@
     "dodge": 1,
     "vision_night": 3,
     "harvest": "zombie",
-    "special_attacks": [ {
+    "special_attacks": [
+      {
         "type": "gun",
         "cooldown": 25,
         "move_cost": 150,
         "gun_type": "napalm_spit",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Volatile zombie ejects firey spit!"
       }
- ],
+    ],
     "death_drops": "default_zombie_death_drops",
     "death_function": [ "FIREBALL", "NORMAL" ],
     "burn_into": "mon_zombie_scorched",
@@ -265,7 +267,7 @@
       "FILTHY"
     ]
   },
-{
+  {
     "id": "mon_zombie_fspitter",
     "type": "MONSTER",
     "name": "fire spitter zombie",
@@ -275,7 +277,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 10,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 70,
     "speed": 95,
     "material": [ "flesh" ],
@@ -290,19 +292,22 @@
     "dodge": 1,
     "vision_night": 3,
     "harvest": "zombie",
-    "special_attacks": [ {
+    "special_attacks": [
+      {
         "type": "gun",
         "cooldown": 20,
         "move_cost": 150,
         "gun_type": "napalm_gob",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Spitter vomits out a glob of firey spit!"
-      } ],
+      }
+    ],
     "death_drops": "default_zombie_death_drops",
     "death_function": [ "FIREBALL", "NORMAL" ],
     "burn_into": "mon_zombie_scorched",
@@ -323,7 +328,7 @@
       "FILTHY"
     ]
   },
-{
+  {
     "id": "mon_zombie_incendiary",
     "type": "MONSTER",
     "name": "incendiary zombie",
@@ -333,7 +338,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 15,
     "volume": "92500 ml",
-    "weight": 120000,
+    "weight": "120000 g",
     "hp": 140,
     "speed": 75,
     "material": [ "flesh" ],
@@ -351,32 +356,33 @@
     "vision_night": 3,
     "luminance": 0,
     "harvest": "zombie",
-    "special_attacks": [ {
+    "special_attacks": [
+      {
         "type": "gun",
         "cooldown": 10,
         "move_cost": 150,
         "gun_type": "napalm_spit",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Incendiary zombie spits a wad of fire!"
-      }, {
+      },
+      {
         "type": "gun",
         "cooldown": 15,
         "move_cost": 150,
         "gun_type": "napalm_gob",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 8, "DEFAULT" ] ],
         "description": "Incendiary zombie vomits up a glob of flamming spit!"
       }
- ],
+    ],
     "death_drops": "default_zombie_death_drops",
     "death_function": [ "FIREBALL", "NORMAL" ],
     "burn_into": "mon_zombie_scorched",
@@ -397,7 +403,7 @@
       "FILTHY"
     ]
   },
-{
+  {
     "id": "mon_zombie_fire",
     "type": "MONSTER",
     "name": "crimson zombie",
@@ -407,7 +413,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 10,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 85,
     "speed": 105,
     "material": [ "flesh" ],
@@ -442,7 +448,7 @@
       "FILTHY"
     ]
   },
-{
+  {
     "id": "mon_zombie_brute_crimson",
     "type": "MONSTER",
     "name": "crimson brute",
@@ -452,7 +458,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 10,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 275,
     "speed": 110,
     "material": [ "flesh" ],
@@ -497,7 +503,7 @@
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 2,
     "volume": "62500 ml",
-    "weight": 81500,
+    "weight": "81500 g",
     "hp": 200,
     "speed": 50,
     "material": [ "flesh" ],
@@ -507,35 +513,30 @@
     "morale": 100,
     "melee_skill": 5,
     "melee_dice": 1,
-    "melee_dice_sides": 2, "//": "melee damage is quite weak since the shockfield around it is its most dangerous function",
+    "melee_dice_sides": 2,
+    "//": "melee damage is quite weak since the shockfield around it is its most dangerous function",
     "vision_night": 3,
     "luminance": 16,
     "harvest": "CBM_SUBS",
-    "special_attacks": [ {
+    "special_attacks": [
+      {
         "type": "melee",
         "cooldown": 20,
         "move_cost": 150,
         "melee_type": "spark",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 1, 1, "DEFAULT" ] ],
         "description": "The husk lights a fire!"
-      } ],
+      }
+    ],
     "death_drops": "default_zombie_death_drops",
     "death_function": [ "NORMAL", "FIREBALL" ],
-    "flags": [
-      "SEES",
-      "HEARS",
-      "WARM",
-      "POISON",
-      "FIREY",
-      "NO_BREATHE",
-      "REVIVES",
-      "FILTHY"
-    ]
+    "flags": [ "SEES", "HEARS", "WARM", "POISON", "FIREY", "NO_BREATHE", "REVIVES", "FILTHY" ]
   },
   {
     "id": "mon_flamebot",
@@ -546,7 +547,7 @@
     "species": [ "ROBOT" ],
     "diff": 10,
     "volume": "30000 ml",
-    "weight": 40750,
+    "weight": "40750 g",
     "hp": 80,
     "speed": 70,
     "material": [ "steel" ],
@@ -563,7 +564,7 @@
     "death_function": [ "EXPLODE", "FIREBALL" ],
     "flags": [ "SEES", "HEARS", "BASHES", "ELECTRONIC", "NO_BREATHE", "PATH_AVOID_DANGER_1", "LOUDMOVES", "FIREPROOF" ]
   },
-{
+  {
     "id": "mon_flametank",
     "type": "MONSTER",
     "name": "exterminator tank",
@@ -572,7 +573,7 @@
     "species": [ "ROBOT" ],
     "diff": 25,
     "volume": "655000 ml",
-    "weight": 175000,
+    "weight": "175000 g",
     "hp": 200,
     "speed": 70,
     "material": [ "steel" ],
@@ -584,24 +585,39 @@
     "armor_cut": 14,
     "vision_day": 50,
     "revert_to_itype": "bot_flametank",
-    "special_attacks": [ [ "FLAMETHROWER", 12 ], {
+    "special_attacks": [
+      [ "FLAMETHROWER", 12 ],
+      {
         "type": "gun",
         "cooldown": 25,
         "move_cost": 150,
         "gun_type": "napalm_bomb",
-        "ammo_type": "generic_no_ammo",
         "fake_str": 5,
         "fake_dex": 4,
         "fake_per": 6,
-        "max_ammo": 1000,
+		"require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
         "ranges": [ [ 2, 10, "DEFAULT" ] ],
         "description": "Tank discharges a massive napalm bomb!"
-      } ],
+      }
+    ],
     "death_drops": { "groups": [ [ "robots", 4 ] ] },
     "death_function": [ "EXPLODE", "FIREBALL" ],
-    "flags": [ "SEES", "HEARS", "BASHES", "ELECTRONIC", "DESTROYS", "GOODHEARING", "NO_BREATHE", "PATH_AVOID_DANGER_1", "LOUDMOVES", "FIREPROOF" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "DESTROYS",
+      "GOODHEARING",
+      "NO_BREATHE",
+      "PATH_AVOID_DANGER_1",
+      "LOUDMOVES",
+      "FIREPROOF"
+    ]
   },
-{
+  {
     "id": "mon_minebot",
     "type": "MONSTER",
     "name": "explosive skitterbot",
@@ -610,7 +626,7 @@
     "species": [ "ROBOT" ],
     "diff": 2,
     "volume": "30000 ml",
-    "weight": 40750,
+    "weight": "40750 g",
     "hp": 50,
     "speed": 130,
     "material": [ "steel" ],
@@ -629,7 +645,7 @@
     "death_function": [ "EXPLODE" ],
     "flags": [ "SEES", "HEARS", "GOODHEARING", "ELECTRONIC", "NO_BREATHE", "PATH_AVOID_DANGER_1" ]
   },
-{
+  {
     "id": "mon_fireminebot",
     "type": "MONSTER",
     "name": "incendiary skitterbot",
@@ -638,7 +654,7 @@
     "species": [ "ROBOT" ],
     "diff": 2,
     "volume": "30000 ml",
-    "weight": 40750,
+    "weight": "40750 g",
     "hp": 50,
     "speed": 130,
     "material": [ "steel" ],
@@ -653,9 +669,8 @@
     "revert_to_itype": "bot_fireminebot",
     "path_settings": { "max_dist": 5 },
     "starting_ammo": { "grenade_inc": 1 },
-    "special_attacks": [ [ "KAMIKAZE", 0 ] ], 
+    "special_attacks": [ [ "KAMIKAZE", 0 ] ],
     "death_function": [ "FIREBALL", "EXPLODE" ],
     "flags": [ "SEES", "HEARS", "GOODHEARING", "ELECTRONIC", "NO_BREATHE", "PATH_AVOID_DANGER_1" ]
   }
 ]
-
